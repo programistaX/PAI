@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zadnako</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="strona">
+<div class="tekst1">
+<h1>Vertical Timeline &darr;</h1>
+</div>
+</section>
+
+<section class="oska">
+  <ul>
+    <li>
+      <div>
+        <czas>1934</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>1937</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>1940</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>1955</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>1997</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>2003</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>2012</czas2></czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>2020</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>2045</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>2345</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>2550</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <czas>2678</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+      </div>
+    </li>
+    <li>
+        <div>
+          <czas>2997</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+        </div>
+      </li>
+      <li>
+        <div>
+          <czas>3333</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+        </div>
+      </li>
+      <li>
+        <div>
+          <czas>0001</czas> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat facilisis semper. 
+        </div>
+      </li>
+      <li>
+        <div>
+          <czas>- - - -</czas> ... 
+        </div> 
+      </li>
+  </ul>
+</section>
+
+
+<script>
+    (function() {
+    
+    'use strict';
+    
+    
+    var items = document.querySelectorAll(".oska li");
+    
+    function isElementInViewport(el) 
+    {
+    var rect = el.getBoundingClientRect();
+    return (
+     rect.top >= 0 &&
+     rect.left >= 0 &&
+     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+    }
+    
+    function callbackFunc() 
+    {
+    for (var i = 0; i < items.length; i++) 
+    {
+     if (isElementInViewport(items[i])) 
+    {
+       items[i].classList.add("in-view");
+    }
+    }
+    }
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("resize", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+    
+    })();
+       </script>
+</body>
+</html>
